@@ -50,27 +50,29 @@ http://localhost:3000
 
 ## 3. File Structure
 
+```text
 weather-dashboard/
 ├── src/
-│ ├── server.js
-│ ├── routes/
-│ │ └── api.js
-│ ├── services/
-│ │ ├── weatherService.js
-│ │ ├── newsService.js
-│ │ └── countryService.js
-│ └── utils/
-│ └── cache.js
+│   ├── server.js
+│   ├── routes/
+│   │   └── api.js
+│   ├── services/
+│   │   ├── weatherService.js
+│   │   ├── newsService.js
+│   │   └── countryService.js
+│   └── utils/
+│       └── cache.js
 │
 ├── public/
-│ ├── index.html
-│ ├── styles.css
-│ └── app.js
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
 │
 ├── .env.example
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
 ---
 

@@ -3,7 +3,11 @@
 ## 1. Project Description
 
 This project is a backend-focused web application built with Node.js and Express.js.  
+<<<<<<< HEAD
 It retrieves real-time weather data from external APIs on the server side, processes the data, and displays the results in a simple and responsive web interface.
+=======
+It retrieves real-time weather data from external APIs on the server side, processes the data, and displays it in a simple and responsive web interface.
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 All third-party API communication is handled strictly on the backend to ensure security, protect API keys, and follow proper backend architecture principles.
 
@@ -46,6 +50,7 @@ http://localhost:3000
 
 ---
 
+<<<<<<< HEAD
 ## 3. File Structure
 
 The project follows a clean and organized folder structure:
@@ -101,6 +106,11 @@ The backend exposes the following REST API routes:
 ## 5. API Usage Details
 
 ### 5.1 Weather API (Core Requirement)
+=======
+## 3. API Usage Details
+
+### 3.1 Weather API (Core Requirement)
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 Endpoint:
 
@@ -118,9 +128,15 @@ The server retrieves real-time weather data from the OpenWeather API and returns
 
 ---
 
+<<<<<<< HEAD
 ### 5.2 Additional APIs
 
 #### 5.2.1 News API
+=======
+### 3.2 Additional APIs
+
+#### 3.2.1 News API
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 Endpoint:
 
@@ -128,7 +144,11 @@ GET /api/news?q=Astana
 
 This endpoint retrieves recent news articles related to the selected city using the NewsAPI.
 
+<<<<<<< HEAD
 #### 5.2.2 Country Information API
+=======
+#### 3.2.2 Country Information API
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 Endpoint:
 
@@ -138,7 +158,11 @@ This endpoint retrieves country details such as country name, region, and curren
 
 ---
 
+<<<<<<< HEAD
 ### 5.3 Combined API Endpoint
+=======
+### 3.3 Combined API Endpoint
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 Endpoint:
 
@@ -148,7 +172,11 @@ This endpoint combines weather data, news data, and country information into a s
 
 ---
 
+<<<<<<< HEAD
 ## 6. Key Design Decisions
+=======
+## 4. Key Design Decisions
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 - All external API requests are handled strictly on the server side to prevent exposing API keys in the frontend.
 - Environment variables are used to store sensitive configuration data securely.
@@ -158,6 +186,7 @@ This endpoint combines weather data, news data, and country information into a s
 
 ---
 
+<<<<<<< HEAD
 ## 7. Screenshots
 
 ### 7.1 Web Interface
@@ -165,6 +194,15 @@ This endpoint combines weather data, news data, and country information into a s
 <img width="1472" height="902" alt="image" src="https://github.com/user-attachments/assets/e161d7a9-67f6-4f50-90a5-77e43f6e603e" />
 
 ### 7.2 API Testing
+=======
+## 5. Screenshots
+
+### 5.1 Web Interface
+
+Insert a screenshot of the running web application showing weather, news, and country information.
+
+### 5.2 API Testing
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 Insert a screenshot from Postman or the browser showing the JSON response from:
 
@@ -172,7 +210,11 @@ Insert a screenshot from Postman or the browser showing the JSON response from:
 
 ---
 
+<<<<<<< HEAD
 ## 8. Technologies Used
+=======
+## 6. Technologies Used
+>>>>>>> ec531ae1c447f7615017d21b8a211b07b6259105
 
 - Node.js  
 - Express.js  

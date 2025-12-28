@@ -8,8 +8,6 @@ It retrieves real-time weather data from external APIs on the server side, proce
 =======
 It retrieves real-time weather data from external APIs on the server side, processes the data, and displays it in a simple and responsive web interface.
 
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
-
 All third-party API communication is handled strictly on the backend to ensure security, protect API keys, and follow proper backend architecture principles.
 
 ---
@@ -115,8 +113,6 @@ The backend exposes the following REST API routes:
 
 ### 3.1 Weather API (Core Requirement)
 
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
-
 Endpoint:
 
 GET /api/weather?city=Astana
@@ -145,8 +141,6 @@ The server retrieves real-time weather data from the OpenWeather API and returns
 
 #### 3.2.1 News API
 
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
-
 Endpoint:
 
 GET /api/news?q=Astana
@@ -160,8 +154,6 @@ This endpoint retrieves recent news articles related to the selected city using 
 =======
 
 #### 3.2.2 Country Information API
-
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
 
 Endpoint:
 
@@ -179,8 +171,6 @@ This endpoint retrieves country details such as country name, region, and curren
 
 ### 3.3 Combined API Endpoint
 
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
-
 Endpoint:
 
 GET /api/summary?city=Astana
@@ -196,8 +186,6 @@ This endpoint combines weather data, news data, and country information into a s
 =======
 
 ## 4. Key Design Decisions
-
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
 
 - All external API requests are handled strictly on the server side to prevent exposing API keys in the frontend.
 - Environment variables are used to store sensitive configuration data securely.
@@ -227,8 +215,6 @@ Insert a screenshot of the running web application showing weather, news, and co
 
 ### 5.2 API Testing
 
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
-
 Insert a screenshot from Postman or the browser showing the JSON response from:
 
 /api/summary?city=Astana
@@ -242,8 +228,6 @@ Insert a screenshot from Postman or the browser showing the JSON response from:
 =======
 
 ## 6. Technologies Used
-
-> > > > > > > ec531ae1c447f7615017d21b8a211b07b6259105
 
 - Node.js
 - Express.js

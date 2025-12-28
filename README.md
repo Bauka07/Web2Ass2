@@ -3,12 +3,11 @@
 ## 1. Project Description
 
 This project is a backend-focused web application built with Node.js and Express.js.
-<<<<<<< HEAD
-It retrieves real-time weather data from external APIs on the server side, processes the data, and displays the results in a simple and responsive web interface.
-=======
-It retrieves real-time weather data from external APIs on the server side, processes the data, and displays it in a simple and responsive web interface.
+It retrieves real-time weather data from external APIs on the server side, processes the data,
+and displays the results in a simple and responsive web interface.
 
-All third-party API communication is handled strictly on the backend to ensure security, protect API keys, and follow proper backend architecture principles.
+All third-party API communication is handled strictly on the backend to ensure security,
+protect API keys, and follow proper backend architecture principles.
 
 ---
 
@@ -31,7 +30,7 @@ PORT=3000
 OPENWEATHER_API_KEY=your_openweather_api_key
 NEWS_API_KEY=your_newsapi_key
 
-The `.env` file is excluded from GitHub using `.gitignore` to prevent exposing sensitive information such as API keys.
+The `.env` file is excluded from GitHub using `.gitignore`.
 
 ### 2.4 Run the Application
 
@@ -43,17 +42,13 @@ Production mode:
 
 npm start
 
-Open the application in your browser:
+Open in browser:
 
 http://localhost:3000
 
 ---
 
-<<<<<<< HEAD
-
 ## 3. File Structure
-
-The project follows a clean and organized folder structure:
 
 weather-dashboard/
 ├── src/
@@ -77,125 +72,56 @@ weather-dashboard/
 ├── package.json
 └── README.md
 
-This structure separates routing logic, external API services, utility functions, and frontend files, making the project easy to understand and maintain.
-
 ---
 
 ## 4. API Routes Overview
 
-The backend exposes the following REST API routes:
-
-- **GET /api/health**
-  Used to check if the backend server is running correctly.
-
-- **GET /api/weather?city=CityName**
-  Returns processed weather data for the given city using the OpenWeather API.
-
-- **GET /api/news?q=CityName**
-  Returns recent news articles related to the selected city using the NewsAPI.
-
-- **GET /api/country?code=CountryCode**
-  Returns country information (name, region, currency) using the REST Countries API.
-
-- **GET /api/summary?city=CityName**
-  Returns a combined response containing weather data, news, and country information.
-  This endpoint is used by the frontend to reduce the number of requests.
+- GET /api/health
+- GET /api/weather?city=CityName
+- GET /api/news?q=CityName
+- GET /api/country?code=CountryCode
+- GET /api/summary?city=CityName
 
 ---
 
 ## 5. API Usage Details
 
-### 5.1 Weather API (Core Requirement)
-
-=======
-
-## 3. API Usage Details
-
-### 3.1 Weather API (Core Requirement)
-
-Endpoint:
+### 5.1 Weather API
 
 GET /api/weather?city=Astana
 
-The server retrieves real-time weather data from the OpenWeather API and returns the following information:
+Returns temperature, feels-like temperature, description, coordinates,
+wind speed, country code, and rain volume for the last 3 hours.
 
-- Temperature
-- Feels-like temperature
-- Weather description
-- Geographic coordinates (latitude and longitude)
-- Wind speed
-- Country code
-- Rain volume for the last 3 hours
-
----
-
-<<<<<<< HEAD
-
-### 5.2 Additional APIs
-
-#### 5.2.1 News API
-
-=======
-
-### 3.2 Additional APIs
-
-#### 3.2.1 News API
-
-Endpoint:
+### 5.2 News API
 
 GET /api/news?q=Astana
 
-This endpoint retrieves recent news articles related to the selected city using the NewsAPI.
+Returns recent news articles related to the city.
 
-<<<<<<< HEAD
-
-#### 5.2.2 Country Information API
-
-=======
-
-#### 3.2.2 Country Information API
-
-Endpoint:
+### 5.3 Country API
 
 GET /api/country?code=KZ
 
-This endpoint retrieves country details such as country name, region, and currency information using the REST Countries API.
+Returns country name, region, and currency.
 
----
-
-<<<<<<< HEAD
-
-### 5.3 Combined API Endpoint
-
-=======
-
-### 3.3 Combined API Endpoint
-
-Endpoint:
+### 5.4 Combined API
 
 GET /api/summary?city=Astana
 
-This endpoint combines weather data, news data, and country information into a single JSON response and is used by the frontend application.
+Returns weather, news, and country data in one response.
 
 ---
-
-<<<<<<< HEAD
 
 ## 6. Key Design Decisions
 
-=======
-
-## 4. Key Design Decisions
-
-- All external API requests are handled strictly on the server side to prevent exposing API keys in the frontend.
-- Environment variables are used to store sensitive configuration data securely.
-- The project follows a service-based architecture, where each external API is implemented in a separate service file.
-- Simple in-memory caching is implemented to reduce unnecessary API requests and improve application performance.
-- Frontend logic is separated from HTML and implemented in a dedicated JavaScript file to keep the code clean and maintainable.
+- Server-side API calls only
+- Environment variables for secrets
+- Service-based architecture
+- In-memory caching
+- Clean separation of frontend and backend logic
 
 ---
-
-<<<<<<< HEAD
 
 ## 7. Screenshots
 
@@ -205,29 +131,11 @@ This endpoint combines weather data, news data, and country information into a s
 
 ### 7.2 API Testing
 
-=======
-
-## 5. Screenshots
-
-### 5.1 Web Interface
-
-Insert a screenshot of the running web application showing weather, news, and country information.
-
-### 5.2 API Testing
-
-Insert a screenshot from Postman or the browser showing the JSON response from:
-
-/api/summary?city=Astana
+Screenshot of `/api/summary?city=Astana` in Postman or browser.
 
 ---
 
-<<<<<<< HEAD
-
 ## 8. Technologies Used
-
-=======
-
-## 6. Technologies Used
 
 - Node.js
 - Express.js

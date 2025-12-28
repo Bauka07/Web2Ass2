@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>City Dashboard</h1>
+        <p>Weather + News + Country info</p>
+      </header>
+
+      <section class="search">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Enter city (e.g., Astana)"
+        />
+        <button id="searchBtn">Get data</button>
+      </section>
+
+      <section id="status" class="status"></section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Weather</h2>
+          <div id="weatherBox" class="box"></div>
+        </article>
+
+        <article class="card">
+          <h2>Country</h2>
+          <div id="countryBox" class="box"></div>
+        </article>
+
+        <article class="card full">
+          <h2>News</h2>
+          <div id="newsBox" class="box"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

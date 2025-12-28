@@ -1,35 +1,68 @@
-🌤 Weather Dashboard — Backend API Integration (Express.js)
-📌 Project Overview
+# Weather Dashboard — Backend API Integration
 
-This project is a backend-focused web application developed using Node.js and Express.js.
-It demonstrates server-side API integration, clean backend architecture, and a responsive frontend interface.
+## 📌 Project Description
+This project is a backend-focused web application built with Node.js and Express.js.
+It retrieves real-time weather data from external APIs on the server side, processes it,
+and displays the results in a simple and responsive web interface.
 
-The application retrieves real-time weather data from the OpenWeather API, enriches it with news and country information, and displays everything in a simple, user-friendly UI.
+All third-party API communication is handled on the backend to ensure security and
+proper application architecture.
 
-⚠️ All third-party API requests are handled strictly on the server side to protect API keys and follow best security practices.
+---
 
-🎯 Assignment Objectives (Covered)
+## ⚙️ Setup Instructions
 
-✔ Server-side API integration
-✔ Secure usage of API keys with environment variables
-✔ Clean project structure
-✔ Responsive frontend
-✔ Ability to explain backend logic during defense
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/weather-dashboard.git
+cd weather-dashboard
+2. Install dependencies
+bash
+Копировать код
+npm install
+3. Environment variables
+Create a .env file in the project root and add the following variables:
 
-🚀 Features
-🌦 Weather API (Core Requirement)
+env
+Копировать код
+PORT=3000
+OPENWEATHER_API_KEY=your_openweather_api_key
+NEWS_API_KEY=your_newsapi_key
+The .env file is excluded from GitHub using .gitignore to protect sensitive data.
 
-Fetched from OpenWeather API on the server.
+4. Run the project
+Development mode:
 
-Returned weather data:
+bash
+Копировать код
+npm run dev
+Production mode:
 
-Temperature (°C)
+bash
+Копировать код
+npm start
+Open the application in your browser:
+
+arduino
+Копировать код
+http://localhost:3000
+🔌 API Usage Details
+Weather API (Core Requirement)
+Endpoint:
+
+bash
+Копировать код
+GET /api/weather?city=Astana
+The server retrieves real-time weather data from the OpenWeather API and returns the
+following information:
+
+Temperature
 
 Feels-like temperature
 
 Weather description
 
-Geographic coordinates (latitude & longitude)
+Geographic coordinates (latitude and longitude)
 
 Wind speed
 
@@ -37,160 +70,59 @@ Country code
 
 Rain volume for the last 3 hours
 
-📰 Additional APIs (Enhancements)
-1️⃣ News API
+Additional APIs
+News API
+Endpoint:
 
-Displays recent news related to the selected city
+bash
+Копировать код
+GET /api/news?q=Astana
+This endpoint retrieves recent news related to the selected city using the NewsAPI.
 
-Uses NewsAPI
+Country Information API
+Endpoint:
 
-Limited to 5 most recent articles
+bash
+Копировать код
+GET /api/country?code=KZ
+This endpoint retrieves country details such as name, region, and currency using the
+REST Countries API.
 
-2️⃣ Country Information API
+Combined API Endpoint
+Endpoint:
 
-Uses REST Countries API
+pgsql
+Копировать код
+GET /api/summary?city=Astana
+This endpoint combines weather data, news, and country information into a single
+response and is used by the frontend application.
 
-Fetches country name, region, and currency data
+🧠 Key Design Decisions
+All external API requests are handled strictly on the server side to prevent exposure
+of API keys.
 
-Country code is derived from weather API response
+Environment variables are used to store sensitive configuration data securely.
 
-🧠 Architecture & Design Decisions
+The project uses a service-based architecture where each API is handled in a separate
+service file.
 
-Server-side only API calls
-→ Prevents exposure of API keys
-→ Improves security and scalability
+Simple in-memory caching is implemented to reduce unnecessary API requests and improve
+performance.
 
-Service-based structure
+Frontend logic is separated from HTML and implemented in public/app.js to keep the
+code clean and maintainable.
 
-src/
-  routes/
-  services/
-  utils/
+📸 Screenshots
+Web Interface
+Insert a screenshot of the running web application here.
 
+API Testing (Postman or Browser)
+Insert a screenshot showing the JSON response from:
 
-Each API has its own service file.
-
-Environment Variables
-
-API keys stored in .env
-
-.env excluded via .gitignore
-
-Caching Layer
-
-Simple in-memory cache to reduce API requests
-
-Improves performance and avoids rate limits
-
-Frontend Logic
-
-All logic in public/app.js
-
-HTML remains clean and presentation-only
-
-📁 Project Structure
-weather-dashboard/
-│
-├── src/
-│   ├── server.js
-│   ├── routes/
-│   │   └── api.js
-│   ├── services/
-│   │   ├── weatherService.js
-│   │   ├── newsService.js
-│   │   └── countryService.js
-│   └── utils/
-│       └── cache.js
-│
-├── public/
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-│
-├── .env.example
-├── .gitignore
-├── package.json
-└── README.md
-
-⚙️ Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/your-username/weather-dashboard.git
-cd weather-dashboard
-
-2️⃣ Install Dependencies
-npm install
-
-3️⃣ Configure Environment Variables
-
-Create .env file in root directory:
-
-PORT=3000
-OPENWEATHER_API_KEY=your_openweather_key
-NEWS_API_KEY=your_newsapi_key
-
-
-📌 Use .env.example as a reference.
-
-4️⃣ Run Application
-
-Development mode (with nodemon):
-
-npm run dev
-
-
-Production mode:
-
-npm start
-
-
-Open browser:
-
-http://localhost:3000
-
-🔌 API Endpoints
-Method	Endpoint	Description
-GET	/api/weather?city=Astana	Weather data
-GET	/api/news?q=Astana	News articles
-GET	/api/country?code=KZ	Country info
-GET	/api/summary?city=Astana	Combined response (used by frontend)
-🖥 Frontend
-
-Responsive layout using CSS Grid
-
-Mobile-friendly
-
-Data displayed using cards and labeled fields
-
-All requests handled via backend
-
-🛡 Security Practices
-
-API keys stored in environment variables
-
-.env excluded from GitHub via .gitignore
-
-No secrets hardcoded in source code
-
-✅ Postman request to /api/summary?city=Astana
-
-(Add images here in GitHub README)
-
-🎓 Defense Preparation (What to Explain)
-
-Be ready to explain:
-
-Why API calls are server-side only
-
-What HTTP 401 error means
-
-How environment variables work
-
-How caching improves performance
-
-How data flows: UI → backend → external API → backend → UI
-
+bash
+Копировать код
+/api/summary?city=Astana
 🧾 Technologies Used
-
 Node.js
 
 Express.js
@@ -207,4 +139,22 @@ NewsAPI
 
 REST Countries API
 
-HTML / CSS / JavaScript
+HTML, CSS, JavaScript
+
+yaml
+Копировать код
+
+---
+
+## ✅ This README fully satisfies:
+✔ Setup instructions  
+✔ API usage details  
+✔ Key design decisions  
+✔ Screenshot section  
+
+If you want next:
+- 🎓 Defense Q&A
+- 📸 Screenshot guidance
+- 🔍 Final repo review  
+
+Just tell me 👍

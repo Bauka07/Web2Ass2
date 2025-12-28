@@ -133,7 +133,12 @@ Returns weather, news, and country data in one response.
 
 ### 7.2 API Testing
 
-Screenshot of `/api/summary?city=Astana` in Postman or browser.
+<img width="1279" height="829" alt="image" src="https://github.com/user-attachments/assets/39c4cf98-828a-4531-8d48-cc9bb730b3bd" />
+<img width="1281" height="905" alt="image" src="https://github.com/user-attachments/assets/6ffdbe7f-5949-4f04-9428-881d4f4dcd06" />
+<img width="1317" height="867" alt="image" src="https://github.com/user-attachments/assets/31aaf77f-b46d-4cdf-b46a-8bd2ecfd351d" />
+<img width="1293" height="873" alt="image" src="https://github.com/user-attachments/assets/3a53a56e-2793-4bf5-b3a5-c7d850b92dc3" />
+
+
 
 ---
 
